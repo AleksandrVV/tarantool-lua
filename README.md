@@ -1,19 +1,19 @@
 lua-tarantool-client
 ===================
 
-Driver for tarantool 1.7 on nginx cosockets and plain lua sockets
+Driver for tarantool 1.7+ on plain lua sockets
 
 Introduction
 ------------
 
-A pure Lua driver for the NoSQL database [Tarantool](http://tarantool.org/) using fast nginx cosockets when available, or [luasocket](https://github.com/diegonehab/luasocket) as a fallback.
+A pure Lua driver for the NoSQL database [Tarantool](http://tarantool.org/) using [luasocket](https://github.com/diegonehab/luasocket).
 
 Requires [lua-MessagePack](https://github.com/fperrad/lua-MessagePack).
 
 luasock
 -------
 
-For `luasock` sockets, [lua-resty-socket](https://github.com/thibaultcha/lua-resty-socket) and [sha1.lua](https://github.com/kikito/sha1.lua) are required.
+For `luasocket` sockets and [sha1.lua](https://github.com/kikito/sha1.lua) are required.
 
 These can be installed using `luarocks install lua-resty-socket` and `luarocks install sha1`
 
