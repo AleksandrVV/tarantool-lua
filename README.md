@@ -15,7 +15,7 @@ luasocket
 
 For `luasocket` sockets and [sha1.lua](https://github.com/kikito/sha1.lua) are required.
 
-These can be installed using `luarocks install lua-resty-socket` and `luarocks install sha1`
+These can be installed using `luarocks install sha1`
 
 
 Synopsis
