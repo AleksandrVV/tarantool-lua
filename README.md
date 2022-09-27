@@ -10,7 +10,7 @@ A pure Lua driver for the NoSQL database [Tarantool](http://tarantool.org/) usin
 
 Requires [lua-MessagePack](https://github.com/fperrad/lua-MessagePack).
 
-luasock
+luasocket
 -------
 
 For `luasocket` sockets and [sha1.lua](https://github.com/kikito/sha1.lua) are required.
