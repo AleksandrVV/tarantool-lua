@@ -2,7 +2,6 @@ local mp = require("MessagePack")
 local C = require("const")
 local string = string
 local table = table
-local ngx = ngx
 local type = type
 local ipairs = ipairs
 local error = error
@@ -10,17 +9,12 @@ string = string
 local socket = nil
 local decode_base64 = nil
 local sha1_bin = nil
-if not ngx then
-  socket = require("socket")
-  socket.unix = require("socket.unix")
-  local mime = require("mime")
-  decode_base64 = mime.unb64
-  sha1_bin = require("sha1").binary
-else
-  socket = ngx.socket
-  decode_base64 = ngx.decode_base64
-  sha1_bin = ngx.sha1_bin
-end
+socket = require("socket")
+socket.unix = require("socket.unix")
+local mime = require("mime")
+decode_base64 = mime.unb64
+sha1_bin = require("sha1").binary
+
 mp.set_integer('unsigned')
 local _prepare_request
 _prepare_request = function(h, b)
